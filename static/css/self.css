@@ -1,0 +1,41 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    overscroll-behavior: none;
+    overflow: hidden;
+}
+
+.slider {
+    position: fixed;
+    top:18%;
+    left: 40%;
+    margin-left: 10%;
+    transform: translateX(-50%);
+    width: 90%;
+    /* color: white; */
+    font-family: sans-serif;
+    /* text-align: right; */
+}
+
+.slider input {
+    width: 30%;
+    margin-bottom: 5px;
+    cursor: pointer;
+    margin-left: 20%;
+}
+
+/* body { */
+    /* color: white; */
+
+/* } */
+
+body {
+    color:white;
+}
+
+/* .opposite { */
+    /* color : black; */
+/* } */
+#stars {
+z-index: -10;
+}

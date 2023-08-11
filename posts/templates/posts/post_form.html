@@ -1,0 +1,24 @@
+{% extends 'posts/post_base.html' %}
+{% load bootstrap5 %}
+{% block post_content %}
+<h3>Create new Post</h3>
+<form action="{% url 'posts:create' %}" method="post"  id="postForm">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <input type="submit" value="Post" class="btn btn-primary btn-large">
+    {% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+
+        {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+        <li>
+        Important:
+        {{ message }}
+        </li>
+         {% endif %}
+
+    {% endfor %}
+</ul>
+{% endif %}
+</form>
+{% endblock %}
